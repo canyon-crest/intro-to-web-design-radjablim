@@ -170,7 +170,7 @@ h3 {
 #pic2 {
   float: right;
   width: 200px;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
   border-radius: var(--radius);
   margin: 4px 0 12px 20px;
