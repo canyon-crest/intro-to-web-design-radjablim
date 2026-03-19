@@ -1,0 +1,406 @@
+/* =============================================
+   styles.css — Milan Radjabli Personal Website
+   External stylesheet (no inline CSS in HTML)
+   ============================================= */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --navy:       #0f172a;
+  --navy-mid:   #1e293b;
+  --amber:      #f59e0b;
+  --amber-dark: #b45309;
+  --cream:      #fdf8f0;
+  --text:       #1e293b;
+  --muted:      #64748b;
+  --border:     #e2e8f0;
+  --white:      #ffffff;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', Helvetica, Arial, sans-serif;
+
+  --radius: 6px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);   /* sans-serif for screen reading */
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.8;                /* line-height on body as a base */
+  color: var(--text);
+  background-color: var(--cream);
+  overflow-x: hidden;              /* prevent horizontal scroll */
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--navy);
+  padding: 60px 24px 50px;
+  text-align: center;
+  border-bottom: 5px solid var(--amber);
+}
+
+#header-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* h1 — Main Title */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+/* h2 — Subtitle / Quote */
+h2 {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--amber);
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+/* ===== #container — sets the width of the page ===== */
+/* FIXED pixel width for the two largest screen sizes  */
+#container {
+  width: 1100px;       /* fixed container for large screens */
+  margin: 48px auto;
+  padding: 0 24px;
+  overflow: hidden;    /* clearfix: contains all floated children */
+}
+
+/* ===== #sidebar — 2nd div, floats beside main content ===== */
+#sidebar {
+  float: right;        /* floats right, beside #main-content */
+  width: 240px;
+  background-color: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 26px 32px;
+  box-shadow: var(--shadow);
+  margin-left: 32px;
+  margin-bottom: 20px;
+}
+
+#sidebar-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--amber);
+  border-bottom: 2px solid var(--amber);
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar ul li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #cbd5e1;
+  padding: 9px 0;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+#sidebar ul li:last-child {
+  border-bottom: none;
+}
+
+/* ===== MAIN CONTENT ===== */
+#main-content {
+  overflow: hidden;    /* fills space beside the floated sidebar */
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content-section {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 36px 40px;
+  margin-bottom: 36px;
+  box-shadow: var(--shadow);
+  overflow: hidden;    /* clearfix for floated images inside */
+}
+
+/* h3 — Paragraph section titles */
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--amber);
+  line-height: 1.3;
+}
+
+/* ===== IMAGES WITH FLOAT (ID rules) ===== */
+#pic1 {
+  float: left;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 4px 20px 12px 0;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+}
+
+#pic2 {
+  float: right;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 4px 0 12px 20px;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+}
+
+#pic3 {
+  float: left;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 4px 20px 12px 0;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+}
+
+/* ===== PARAGRAPHS ===== */
+p {
+  font-family: var(--font-body);  /* sans-serif for all paragraphs */
+  font-size: 1.0rem;
+  line-height: 1.85;              /* line-height for readability */
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* ===== CLASS RULES — one applied to each paragraph ===== */
+
+/* .early — warm amber left border */
+.early {
+  border-left: 4px solid var(--amber);
+  padding-left: 16px;
+  background-color: #fffbf2;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* .current — blue highlight tint */
+.current {
+  font-weight: 400;
+  color: #0f172a;
+  border-left: 4px solid #38bdf8;
+  padding-left: 16px;
+  background-color: #f0faff;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* .future — bold green tint */
+.future {
+  font-weight: 500;
+  border-left: 4px solid #86efac;
+  padding-left: 16px;
+  background-color: #f0fdf4;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ===== LINKS — all three states changed from browser defaults ===== */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border-radius: 30px;
+  border: 2px solid var(--amber);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* :link — unvisited (changed from default blue) */
+a:link {
+  color: var(--amber-dark);
+  background-color: transparent;
+}
+
+/* :visited — after clicking (changed from default purple) */
+a:visited {
+  color: var(--muted);
+  border-color: var(--muted);
+  background-color: transparent;
+}
+
+/* :hover — mouse over */
+a:hover {
+  background-color: var(--amber);
+  color: var(--navy);
+  border-color: var(--amber);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--navy-mid);
+  color: var(--muted);
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  margin-top: 24px;
+  border-top: 3px solid var(--amber);
+}
+
+/* =============================================
+   MEDIA QUERIES
+
+   Breakpoint 1 (≤1200px): FIXED container (960px) — large screen
+   Breakpoint 2 (≤992px):  VARIABLE container (95%) — sidebar stops floating
+   Breakpoint 3 (≤768px):  VARIABLE container (95%) — images stop floating
+   ============================================= */
+
+/* --- Breakpoint 1: max-width 1200px — FIXED container --- */
+@media (max-width: 1200px) {
+  #container {
+    width: 960px;    /* still a fixed pixel width */
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  #sidebar {
+    width: 210px;
+    margin-left: 24px;
+  }
+
+  .content-section {
+    padding: 28px 30px;
+  }
+
+  #pic1, #pic2, #pic3 {
+    width: 175px;
+    height: 135px;
+  }
+}
+
+/* --- Breakpoint 2: max-width 992px — VARIABLE container, sidebar stops floating --- */
+@media (max-width: 992px) {
+  #container {
+    width: 95%;      /* variable — scales with the viewport */
+    margin: 32px auto;
+    padding: 0 16px;
+  }
+
+  /* Sidebar stops floating — stacks above main content */
+  #sidebar {
+    float: none;     /* no longer floats beside content */
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
+  #sidebar ul li {
+    display: inline-block;
+    width: 48%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  .content-section {
+    padding: 24px 24px;
+  }
+
+  #pic1, #pic2, #pic3 {
+    width: 160px;
+    height: 125px;
+  }
+}
+
+/* --- Breakpoint 3: max-width 768px — VARIABLE container, images stop floating --- */
+@media (max-width: 768px) {
+  header {
+    padding: 36px 16px 30px;
+  }
+
+  #container {
+    width: 95%;      /* variable — scales with the viewport */
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 0.92rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .content-section {
+    padding: 18px 16px;
+    margin-bottom: 24px;
+  }
+
+  /* Images stop floating — stack above paragraph text */
+  #pic1, #pic2, #pic3 {
+    float: none;
+    display: block;
+    width: 100%;
+    height: 190px;
+    margin: 0 0 16px 0;
+  }
+
+  #sidebar ul li {
+    display: block;
+    width: 100%;
+  }
+
+  a {
+    font-size: 0.8rem;
+    padding: 7px 15px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 16px 12px;
+  }
+}
