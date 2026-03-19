@@ -157,11 +157,11 @@ h3 {
 /* ===== IMAGES WITH FLOAT (ID rules) ===== */
 #pic1 {
   float: left;
-  width: 180px;
-  height: 150px;
+  width: 100px;
+  height: 140px;
   object-fit: cover;
   border-radius: var(--radius);
-  margin: 4x 25px 12px 0;
+  margin: 4x 20px 12px 0;
   border: 3px solid var(--border);
   box-shadow: var(--shadow);
   max-width: 100%;
@@ -181,11 +181,11 @@ h3 {
 
 #pic3 {
   float: left;
-  width: 180px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: var(--radius);
-  margin: 4px 25px 12px 0;
+  margin: 4px 20px 12px 0;
   border: 3px solid var(--border);
   box-shadow: var(--shadow);
   max-width: 100%;
