@@ -157,11 +157,11 @@ h3 {
 /* ===== IMAGES WITH FLOAT (ID rules) ===== */
 #pic1 {
   float: left;
-  width: 100px;
-  height: 140px;
+  width: 150px;
+  height: 155px;
   object-fit: cover;
   border-radius: var(--radius);
-  margin: 4x 20px 12px 5px;
+  margin: 10px 10px 12px 3px;
   border: 3px solid var(--border);
   box-shadow: var(--shadow);
   max-width: 100%;
@@ -419,4 +419,12 @@ footer {
 #sidebar ul li:hover {
   color: var(--amber);
   padding-left: 8px;
+}
+h2 {
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+h2:hover {
+  color: var(--white);
+  letter-spacing: 0.05em;
 }
