@@ -157,7 +157,7 @@ h3 {
 /* ===== IMAGES WITH FLOAT (ID rules) ===== */
 #pic1 {
   float: left;
-  width: 200px;
+  width: 180px;
   height: 150px;
   object-fit: cover;
   border-radius: var(--radius);
@@ -169,7 +169,7 @@ h3 {
 
 #pic2 {
   float: right;
-  width: 200px;
+  width: 180px;
   height: 220px;
   object-fit: cover;
   border-radius: var(--radius);
@@ -403,4 +403,11 @@ footer {
     font-size: 0.8rem;
     padding: 16px 12px;
   }
+}
+#pic1, #pic2, #pic3 {
+  transition: transform 0.3s ease;
+}
+
+#pic1:hover, #pic2:hover, #pic3:hover {
+  transform: scale(1.08);
 }
